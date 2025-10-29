@@ -4,6 +4,7 @@ black==25.9.0
 click==8.3.0
 Django==5.2.7
 djangorestframework==3.16.1
+djangorestframework_simplejwt==5.5.1
 djhtml==3.0.10
 drf-spectacular==0.28.0
 inflection==0.5.1
@@ -14,6 +15,7 @@ packaging==25.0
 pathspec==0.12.1
 platformdirs==4.5.0
 psycopg2-binary==2.9.11
+PyJWT==2.10.1
 python-decouple==3.8
 pytokens==0.2.0
 PyYAML==6.0.3
