@@ -3,23 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager Pro</title>
     <link rel="stylesheet" href="css/style.css" />
-    <title>Трекер задач</title>
   </head>
   <body>
-    <!-- Форма для входа -->
-    <div id="app">
-        <h1>Форма входа</h1>
-      <div id="login-form">
-        <input type="text" placeholder="Логин" id="username" />
-        <input type="password" placeholder="Пароль" id="password" />
-        <button onclick="login()">Войти</button>
-      </div>
-    </div>
+    <header class="header">
+      <h1>Task Tracker Pro</h1>
+      <nav>
+        <a href="login.html">Вход</a>
+        <a href="tasks.html">Задачи</a>
+        <a href="users.html">Профиль</a>
+      </nav>
+    </header>
 
-    <!-- Задачи -->
-    <div id="tasks"></div>
+    <main class="container">
+      <section id="welcome">
+        <h2>Добро пожаловать!</h2>
+        <p>Выберете действие:</p>
+        <ul>
+          <li><a href="login.html">Войти в систему</a></li>
+          <li><a href="tasks.html">Посмотреть задачи</a></li>
+          <li><a href="users.html">Мой профиль</a></li>
+        </ul>
+      </section>
+    </main>
 
-    <script src="js/script.js"></script>
+    <footer class="footer">
+      <p>&copy; 2025 Task Manager Pro. Все права защищены.</p>
+    </footer>
+
+    <!-- Общие скрипты -->
+    <script src="js/auth.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/router.js"></script>
+
+    <!-- Инициализация маршрутизатора -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        initRouter();
+      });
+    </script>
   </body>
 </html>

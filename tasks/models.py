@@ -54,7 +54,10 @@ class Task(models.Model):
     created_at = models.DateTimeField(
         auto_now_add=True, verbose_name="Дата и время создания"
     )
-    updated_at = models.DateTimeField(auto_now=True)
+    updated_at = (
+        models.DateTimeField(auto_now=True, verbose_name="Дата и время выполнения"),
+    )
+    is_completed = models.BooleanField(default=False, verbose_name="Задача выполнена")
 
     def __str__(self):
         return self.title
